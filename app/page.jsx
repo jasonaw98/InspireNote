@@ -1,6 +1,6 @@
 "use client"
-import Feed from "@components/Feed"
-import Typical from 'react-typical'
+import Feed from "@components/Feed";
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Home() {
   const words = [
@@ -18,11 +18,18 @@ export default function Home() {
     <h1 className="head_text text-center">
       Discover & Share 
       <br className="max-md:hidden"/>
-      <span className="orange_gradient text-center"> 
-    <Typical
-        steps={words}
-        loop={Infinity}
-        wrapper="span"
+      <span className="orange_gradint text-center"> 
+      <TypeAnimation
+      preRenderFirstString={true}
+      sequence={words}
+      speed={50}
+      repeat={Infinity}
+      style={{
+        background: 'linear-gradient(90deg, #fbde2e, #FFC000)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        color: 'transparent',
+      }}
       />
       </span>
     </h1>
