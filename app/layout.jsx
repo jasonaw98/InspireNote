@@ -1,6 +1,7 @@
 import '@styles/globals.css'
 import Nav from '@components/Nav';
 import Provider from '@components/Provider';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'InspireNote',
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <Nav />
         {children}
       </main>
+      <Analytics />
       </Provider>
     </body>
    </html>
